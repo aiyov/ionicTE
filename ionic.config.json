@@ -1,0 +1,8 @@
+{
+  "name": "IonicTE",
+  "app_id": "71bfb903",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

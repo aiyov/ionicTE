@@ -1,0 +1,25 @@
+.card-content {
+  align-self: center;
+  white-space: normal!important;
+}
+.item-inner {
+  border: none!important;
+}
+.toolbar-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+ion-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5rem;
+}
+ion-buttons {
+  margin-right: 0.5rem;
+  padding: 4px 8px;
+  color: #fff;
+  background: green;
+  border-radius: 3px;
+}
