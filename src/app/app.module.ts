@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { AppRoutingModule } from '../router/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { Keyboard } from '@ionic-native/keyboard';
+import { Camera } from '@ionic-native/camera';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
@@ -46,6 +47,7 @@ import {BackButtonService} from "../services/backButton.service";
     // Register
   ],
   providers: [
+    Camera,
     Keyboard,
     StatusBar,
     SplashScreen,
