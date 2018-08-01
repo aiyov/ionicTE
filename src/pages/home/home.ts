@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-// import {Router} from '@angular/router';
+import { App, NavController } from 'ionic-angular';
+import {Router} from '@angular/router';
 import {Chat} from "../chat/chat";
+import {TabsPage} from "../tabs/tabs";
 
 @Component({
   selector: 'page-home',
@@ -11,12 +12,14 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    // public router: Router
+    public appCtrl: App,
+    public router: Router
   ) {
 
   }
   toChat() {
-    this.navCtrl.push(Chat)
+    this.navCtrl.setRoot(TabsPage)
+    this.appCtrl.getRootNav().push(Chat)
     // this.router.navigate(['chat']);
   }
 }

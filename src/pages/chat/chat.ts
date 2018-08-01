@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 // import {Router} from '@angular/router';
 
-/*interface  chatInfo {
+interface  chatInfo {
   id: number;
   avatar: string;
   words: string;
-}*/
+}
 
 @Component({
   selector: 'page-chat',
@@ -17,11 +17,9 @@ export class Chat {
   constructor(
     public navCtrl: NavController,
     // public router: Router
-  ) {
-
-  }
-
-  /*chatList:chatInfo[] = [
+  ) {}
+  inputChat:string = ''
+  chatList:chatInfo[] = [
     {
       id: 123,
       avatar: 'assets/imgs/logo.png',
@@ -36,6 +34,23 @@ export class Chat {
       id: 123,
       avatar: 'assets/imgs/logo.png',
       words: '你是猪吗，你才是猪啊.'
+    },
+    {
+      id: 456,
+      avatar: 'assets/imgs/logo.png',
+      words: '故事是这样的、聚会吃饭……'
+    },
+  ]
+  updateChat(){
+    if(!this.inputChat) {
+      return false
     }
-  ]*/
+    var obj:chatInfo = {
+      id:Math.random()>0.5?456:123,
+      avatar: 'assets/imgs/logo.png',
+      words: this.inputChat
+    }
+    this.chatList.push(obj)
+    this.inputChat = '';
+  }
 }

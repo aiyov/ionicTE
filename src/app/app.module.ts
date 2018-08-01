@@ -14,6 +14,7 @@ import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Chat } from '../pages/chat/chat';
 import { View } from '../pages/view/view';
+import {Persional} from "../pages/persional/persional";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ import {BackButtonService} from "../services/backButton.service";
     HomePage,
     Register,
     Chat,
-    View
+    View,
+    Persional
   ],
   imports: [
     AppRoutingModule,
@@ -41,7 +43,8 @@ import {BackButtonService} from "../services/backButton.service";
     AboutPage,
     ContactPage,
     HomePage,
-    View
+    View,
+    Persional
     // TabsPage,
     // Login,
     // Register

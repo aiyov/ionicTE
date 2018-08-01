@@ -1,39 +1,26 @@
 <ion-header>
   <ion-navbar>
-    <ion-icon margin-left name="arrow-round-back" size="large"></ion-icon>
+    <!--<ion-icon margin-left name="arrow-round-back" size="large"></ion-icon>-->
     <ion-title text-right>aiyo</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <ion-list>
-    <!--<ion-item no-padding vertical-align-top *ngFor="let chat of chatList">
-      <ion-avatar item-start>
+  <ion-list padding-top>
+    <ion-item no-padding vertical-align-top *ngFor="let chat of chatList">
+      <ion-avatar item-start style="margin-left: 1em" *ngIf="chat.id!=456">
         <img [src]="chat.avatar">
       </ion-avatar>
-      <ion-card-content no-padding padding-right no-border>{{chat.words}}</ion-card-content>
-    </ion-item>-->
-    <ion-item no-padding vertical-align-top>
-      <ion-avatar item-start>
-        <img src="../../assets/imgs/logo.png">
+      <ion-card-content item-left no-padding no-border *ngIf="chat.id!=456">{{chat.words}}</ion-card-content>
+
+      <ion-card-content no-padding item-right no-border padding-left *ngIf="chat.id==456">{{chat.words}}</ion-card-content>
+      <ion-avatar item-end *ngIf="chat.id==456">
+        <img [src]="chat.avatar">
       </ion-avatar>
-      <ion-card-content no-padding padding-right no-border>你是猪吗，你才是猪啊某上市公司董事长和某地产公司董事</ion-card-content>
-    </ion-item>
-    <ion-item no-padding margin-left vertical-align-top>
-      <ion-card-content no-padding no-border item-right padding-left>故事是这样的：某上市公司董事长和某地产公司董事，还都参加了高尔夫球队，两人平时经常相约打球、聚会吃饭……</ion-card-content>
-      <ion-avatar item-end no-margin>
-        <img src="../../assets/imgs/logo.png">
-      </ion-avatar>
-    </ion-item>
-    <ion-item no-padding vertical-align-top>
-      <ion-avatar item-start>
-        <img src="../../assets/imgs/logo.png">
-      </ion-avatar>
-      <ion-card-content item-left no-padding padding-right>你是猪吗，你才是猪啊.</ion-card-content>
     </ion-item>
   </ion-list>
 </ion-content>
 
 <ion-footer padding-left>
-  <ion-input no-margin></ion-input>
-  <ion-buttons>发送</ion-buttons>
+  <ion-input [(ngModel)]="inputChat" no-margin>{{inputChat}}</ion-input>
+  <ion-buttons (click)="updateChat()">发送</ion-buttons>
 </ion-footer>
