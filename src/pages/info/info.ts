@@ -5,9 +5,9 @@ import {Persional} from "../persional/persional";
 
 @Component({
   selector: 'page-contact',
-  templateUrl: 'contact.html'
+  templateUrl: 'info.html'
 })
-export class ContactPage {
+export class Info {
 
   constructor(
     public navCtrl: NavController,

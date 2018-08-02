@@ -18,10 +18,43 @@
   //overflow-y: hidden;
   margin-top: 56px;
   padding-bottom: 0!important;
+  background: color($colors,light);
 }
 ion-icon {
   overflow: hidden;
 }
 ion-buttons {
   pointer-events: auto;
+}
+
+.border-1px::after {
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+  right: 18px;
+  display: block;
+  overflow: hidden;
+  content: '';
+  border-bottom: 1px solid color($colors,gray);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5)
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.34);
+    transform: scaleY(0.34)
+  }
 }

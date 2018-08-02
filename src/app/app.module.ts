@@ -3,17 +3,19 @@ import { AppRoutingModule } from '../router/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { Keyboard } from '@ionic-native/keyboard';
 import { Camera } from '@ionic-native/camera';
+import { ImagePicker } from '@ionic-native/image-picker';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { Info } from '../pages/info/info';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Chat } from '../pages/chat/chat';
 import { View } from '../pages/view/view';
+import {History} from "../pages/history/history";
 import {Persional} from "../pages/persional/persional";
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,12 +27,13 @@ import {BackButtonService} from "../services/backButton.service";
     Login,
     MyApp,
     AboutPage,
-    ContactPage,
+    Info,
     HomePage,
     Register,
     Chat,
     View,
-    Persional
+    Persional,
+    History
   ],
   imports: [
     AppRoutingModule,
@@ -41,8 +44,9 @@ import {BackButtonService} from "../services/backButton.service";
   entryComponents: [
     MyApp,
     AboutPage,
-    ContactPage,
+    Info,
     HomePage,
+    History,
     View,
     Persional
     // TabsPage,
@@ -52,6 +56,7 @@ import {BackButtonService} from "../services/backButton.service";
   providers: [
     Camera,
     Keyboard,
+    ImagePicker,
     StatusBar,
     SplashScreen,
     BackButtonService,

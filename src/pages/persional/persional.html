@@ -1,12 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      个人信息
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <button ion-button color="primary" (click)="getPic()">测试ionic Native Carema插件</button>
-  <img [src]="path" alt="图片预览" />
+<ion-content>
+  <ion-item class="border-1px" margin-top>
+    <span item-start>头像</span>
+    <ion-avatar item-end>
+      <img src="../../assets/imgs/logo.png" alt="">
+    </ion-avatar>
+  </ion-item>
+  <ion-item class="border-1px">
+    <span item-start>昵称</span>
+    <span item-end class="gray">new Object</span>
+  </ion-item>
+  <ion-item>
+    <span item-start>ID</span>
+    <span item-end class="gray">000001</span>
+  </ion-item>
 </ion-content>
