@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>新的朋友</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar margin-top no-padding (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-item-group>
+    <ion-item-divider color="light">新的朋友</ion-item-divider>
+    <ion-item  class="border-1px" (click)="toChat()">
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/logo.png">
+      </ion-avatar>
+      <h2>Argentina</h2>
+      <span item-end class="gray">已添加</span>
+    </ion-item>
+    <ion-item  class="border-1px">
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/logo.png">
+      </ion-avatar>
+      <h2>Argentina</h2>
+      <!--<span item-end class="gray">已添加</span>-->
+      <button ion-button item-end color="secondary">接受</button>
+    </ion-item>
+  </ion-item-group>
+</ion-content>
