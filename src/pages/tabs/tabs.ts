@@ -18,6 +18,5 @@ export class TabsPage {
   }
 
   ngOnInit() {
-    alert(navigator.userAgent)
   }
 }

@@ -18,7 +18,9 @@ import { View } from '../pages/view/view';
 import { History } from "../pages/history/history";
 import { Persional } from "../pages/persional/persional";
 import { Setlist } from "../pages/setlist/setlist";
-import {Newfriends} from "../pages/newfriends/newfriends";
+import { Newfriends } from "../pages/newfriends/newfriends";
+import { Changephone } from "../pages/changephone/changephone";
+import { Changepwd } from "../pages/changepwd/changepwd";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -37,7 +39,9 @@ import {BackButtonService} from "../services/backButton.service";
     Persional,
     History,
     Setlist,
-    Newfriends
+    Newfriends,
+    Changephone,
+    Changepwd
   ],
   imports: [
     AppRoutingModule,
@@ -54,7 +58,9 @@ import {BackButtonService} from "../services/backButton.service";
     View,
     Persional,
     Setlist,
-    Newfriends
+    Newfriends,
+    Changephone,
+    Changepwd
   ],
   providers: [
     Camera,

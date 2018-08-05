@@ -5,13 +5,14 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 // import {Keyboard} from '@ionic-native/keyboard';
 
 // import {Login} from '../pages/login/login';
-import {View} from '../pages/view/view';
+// import {View} from '../pages/view/view';
+import {Changepwd} from "../pages/changepwd/changepwd";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = View;
+  rootPage: any = Changepwd;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

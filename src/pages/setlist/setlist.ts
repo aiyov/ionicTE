@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-// import { NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import {Camera, CameraOptions} from '@ionic-native/camera';
+import { Changephone } from "../changephone/changephone";
 
 @Component({
   selector: 'page-setlist',
@@ -9,11 +10,17 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
 
 export class Setlist {
 
-  constructor(private camera: Camera) {
+  constructor(
+    private camera: Camera,
+    private nav: NavController,
+  ) {
   }
 
   path:string = 'assets/imgs/logo.png'
 
+  toChangePhone() {
+    this.nav.push(Changephone)
+  }
   getPic() {
     const options: CameraOptions = {
       quality: 100,
