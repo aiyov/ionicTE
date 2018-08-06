@@ -24,8 +24,9 @@ const appRoutes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
+    component: Login,
+    /*redirectTo: 'login',
+    pathMatch: 'full'*/
   },
   {
     path: '**',

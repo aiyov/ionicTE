@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import { Changephone } from "../changephone/changephone";
+import { Changepwd } from "../changepwd/changepwd";
 
 @Component({
   selector: 'page-setlist',
@@ -20,6 +21,9 @@ export class Setlist {
 
   toChangePhone() {
     this.nav.push(Changephone)
+  }
+  toChangePwd() {
+    this.nav.push(Changepwd)
   }
   getPic() {
     const options: CameraOptions = {

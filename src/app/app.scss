@@ -17,6 +17,11 @@
 .gray {
   color: color($colors, gray);
 }
+.back-button {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
 .scroll-content {
   //overflow-y: hidden;
   margin-top: 56px;

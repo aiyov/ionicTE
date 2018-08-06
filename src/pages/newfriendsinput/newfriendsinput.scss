@@ -1,0 +1,12 @@
+page-input {
+  .primary {
+    color: #32db64;
+  }
+  input.text-input {
+    height: 22px;
+    border-bottom: 1px solid #dedede;
+  }
+  input.text-input-md:focus {
+    border-bottom: 1px solid #4B946A;
+  }
+}

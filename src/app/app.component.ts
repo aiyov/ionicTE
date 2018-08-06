@@ -4,15 +4,13 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 // import {Keyboard} from '@ionic-native/keyboard';
 
-// import {Login} from '../pages/login/login';
-// import {View} from '../pages/view/view';
-import {Changepwd} from "../pages/changepwd/changepwd";
+import {Login} from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = Changepwd;
+  rootPage: any = Login;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

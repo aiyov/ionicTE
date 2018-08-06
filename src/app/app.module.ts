@@ -14,11 +14,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Chat } from '../pages/chat/chat';
-import { View } from '../pages/view/view';
+// import { View } from '../pages/view/view';
 import { History } from "../pages/history/history";
 import { Persional } from "../pages/persional/persional";
 import { Setlist } from "../pages/setlist/setlist";
 import { Newfriends } from "../pages/newfriends/newfriends";
+import { NewfriendsInput } from "../pages/newfriendsinput/newfriendsinput";
 import { Changephone } from "../pages/changephone/changephone";
 import { Changepwd } from "../pages/changepwd/changepwd";
 
@@ -35,13 +36,14 @@ import {BackButtonService} from "../services/backButton.service";
     HomePage,
     Register,
     Chat,
-    View,
+    // View,
     Persional,
     History,
     Setlist,
     Newfriends,
     Changephone,
-    Changepwd
+    Changepwd,
+    NewfriendsInput
   ],
   imports: [
     AppRoutingModule,
@@ -50,17 +52,20 @@ import {BackButtonService} from "../services/backButton.service";
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    Login,
+    TabsPage,
     MyApp,
     AboutPage,
     Info,
     HomePage,
     History,
-    View,
+    // View,
     Persional,
     Setlist,
     Newfriends,
     Changephone,
-    Changepwd
+    Changepwd,
+    NewfriendsInput
   ],
   providers: [
     Camera,

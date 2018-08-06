@@ -1,21 +1,17 @@
 import { Component } from '@angular/core';
 import { App, NavController } from 'ionic-angular';
-import {Router} from '@angular/router';
 import {Chat} from "../chat/chat";
-import {Newfriends} from "../newfriends/newfriends";
-import { NewfriendsInput } from "../newfriendsinput/newfriendsinput";
 import {TabsPage} from "../tabs/tabs";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-input',
+  templateUrl: 'newfriendsinput.html'
 })
-export class HomePage {
+export class NewfriendsInput {
 
   constructor(
     public navCtrl: NavController,
     public appCtrl: App,
-    public router: Router
   ) {
 
   }
@@ -23,8 +19,5 @@ export class HomePage {
     this.navCtrl.setRoot(TabsPage)
     this.appCtrl.getRootNav().push(Chat)
     // this.router.navigate(['chat']);
-  }
-  toNewFriends() {
-    this.appCtrl.getRootNav().push(NewfriendsInput)
   }
 }

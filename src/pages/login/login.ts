@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Keyboard} from '@ionic-native/keyboard';
-import {Router, ActivatedRoute} from '@angular/router';
+// import {Router, ActivatedRoute} from '@angular/router';
 import {NavController} from 'ionic-angular';
 import {Platform} from 'ionic-angular';
 import {TabsPage} from "../tabs/tabs";
@@ -36,7 +36,6 @@ export class Login {
   }
 
   login() {
-    // this.router.navigate(['/tabsPage']);
     this.nav.push(TabsPage)
   }
 
